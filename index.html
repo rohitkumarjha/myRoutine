@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Routine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+
+<nav id="sidebar" class="sidebar">
+  <h2>My Routine</h2>
+  <ul>
+    <li onclick="showScreen('today')">Today</li>
+    <li onclick="showScreen('weekly')">Weekly Progress</li>
+    <li onclick="showScreen('tracker')">Habit Tracker</li>
+    <li onclick="showScreen('stats')">Stats</li>
+  </ul>
+</nav>
+
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+<header>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <h1 id="headerTitle">Today</h1>
+</header>
+
+<main>
+
+  <!-- TODAY SCREEN -->
+  <section id="today" class="screen active">
+    <h2 id="todayDate"></h2>
+    <p id="motivation"></p>
+
+    <div id="progressBar"><div id="progressFill"></div></div>
+    <p><span id="streak"></span> 🔥</p>
+
+    <ul id="todayTasks"></ul>
+  </section>
+
+  <!-- WEEKLY SCREEN -->
+  <section id="weekly" class="screen">
+    <h2>This Week</h2>
+    <div id="weekCards"></div>
+  </section>
+
+  <!-- TRACKER SCREEN -->
+  <section id="tracker" class="screen">
+    <h2>Habit Tracker</h2>
+    <p>Coming soon…</p>
+  </section>
+
+  <!-- STATS SCREEN -->
+  <section id="stats" class="screen">
+    <h2>Your Stats</h2>
+    <p>Coming soon…</p>
+  </section>
+
+</main>
+
+</body>
+</html>
